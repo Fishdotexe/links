@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+:root {
+    --accent: #E6E6E6;
+    --font: 'Karla', sans-serif;
+    --delay: .3s;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: var(--font);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    opacity:100;
+    animation: gradient 15s ease infinite;
+}
+
+#profilePicture, #profilePicture img {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 35px auto 20px;
+    border-radius: 50%;
+    -webkit-tap-highlight-color: transparent;
+}
+#userName {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+#links {
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 27px auto;
+}
+.link {
+    position: relative;
+    background-color: rgba(43, 0, 54, 0.2);
+    color: var(--accent);
+    border: solid var(--accent) 2px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin: 0px 10px 10px 10px;
+    padding: 10px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) {
+    .link:hover {
+        background-color: var(--accent);
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.link:active {
+    background-color: var(--accent);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#tag {
+    position: relative;
+    padding-bottom: 20px;
+    color: var(--accent);
+    font-size: 1rem;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+
+    /*  animation   */
+    overflow: hidden;
+    background: var(--accent);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear 0.2 infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
